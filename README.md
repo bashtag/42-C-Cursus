@@ -1,2 +1,2 @@
 # 42-C-Cursus
-My 42 Projectss
+My 42 Projects
