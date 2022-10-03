@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgokce <bgokce@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 13:48:27 by bgokce            #+#    #+#             */
-/*   Updated: 2022/10/03 17:25:45 by bgokce           ###   ########.fr       */
+/*   Created: 2022/10/03 15:58:21 by bgokce            #+#    #+#             */
+/*   Updated: 2022/10/03 16:11:01 by bgokce           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+#define FT_PRINTF_H
 
-int	ft_printf(const char * string, ...)
-{
-	return (1);
-}
+#include <stdarg.h>
+#include <stdlib.h>
+
+int	ft_printf(const char *, ...);
+
+#endif
