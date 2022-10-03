@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgokce <bgokce@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 13:48:27 by bgokce            #+#    #+#             */
-/*   Updated: 2022/10/03 13:48:29 by bgokce           ###   ########.fr       */
+/*   Created: 2022/10/03 14:33:20 by bgokce            #+#    #+#             */
+/*   Updated: 2022/10/03 14:37:13 by bgokce           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	return (0);
+	size_t	i;
+
+	i = 0;
+	if (!n)
+		return (NULL);
+	while (i < n)
+	{
+		if (((unsigned char *)str)[i] == (unsigned char)c)
+			return (&((void *)str)[i]);
+		i++;
+	}
+	return (NULL);
 }

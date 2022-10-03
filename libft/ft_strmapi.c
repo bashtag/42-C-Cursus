@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgokce <bgokce@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 13:48:27 by bgokce            #+#    #+#             */
-/*   Updated: 2022/10/03 13:48:29 by bgokce           ###   ########.fr       */
+/*   Created: 2022/10/03 14:33:20 by bgokce            #+#    #+#             */
+/*   Updated: 2022/10/03 14:37:13 by bgokce           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	return (0);
+	unsigned int	i;
+	char			*res;
+
+	i = 0;
+	if (!s)
+		return (0);
+	res = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!res)
+		return (0);
+	while (s[i])
+	{
+		res[i] = (*f)(i, s[i]);
+		i++;
+	}
+	res[i] = 0;
+	return (res);
 }

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgokce <bgokce@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 13:48:27 by bgokce            #+#    #+#             */
-/*   Updated: 2022/10/03 13:48:29 by bgokce           ###   ########.fr       */
+/*   Created: 2022/10/03 14:33:20 by bgokce            #+#    #+#             */
+/*   Updated: 2022/10/03 14:37:13 by bgokce           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+int	ft_lstsize(t_list *lst)
 {
-	return (0);
+	int	len;
+
+	len = 0;
+	while (lst != NULL)
+	{
+		len++;
+		lst = lst->next;
+	}
+	return (len);
 }
