@@ -1,9 +1,14 @@
 NAME	= libftprintf.a
 
-SRC		= ft_printf.c \
-			util.c
+SRCS		= ft_printf.c \
+			ft_putnbr.c \
+			ft_putstr.c \
+			ft_strlen.c \
+			ft_hexputnbr.c \
+			ft_putmem.c \
+			ft_uputnbr.c
 
-OBJS	= $(SRCS:%.c=%o)
+OBJS	= $(SRCS:%.c=%.o)
 
 FLAGS	= -Wall -Werror -Wextra
 
